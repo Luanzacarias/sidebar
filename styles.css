@@ -48,7 +48,14 @@ aside {
   flex-direction: column;
   padding: 12px 13px;
 
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.closed .sidebar {
+  width: 76px;
+}
+.active .sidebar {
+  width: 250px;
 }
 
 .sidebar button {
@@ -78,14 +85,13 @@ button img {
 }
 @keyframes slide {
   from {
-    transform: translateX(-50px);
+    transform: translateX(-200px);
   }
   to {
     transform: translateX(0);
   }
 }
 
-.active {}
 .closed .retractable {
   display: none;
 }
@@ -113,7 +119,7 @@ button img {
   border-radius: 12px;
   gap: 13px;
 
-  transition: opacity 0.2s;
+  transition: all 0.2s;
 }
 .closed .search:hover {
   opacity: 0.5;
@@ -131,18 +137,28 @@ button img {
   outline: 0;
 }
 
+footer {
+  background-color: var(--light-green); 
+}
+.closed footer {
+  background-color: var(--light-grey-60);
+}
 
 .log-out-container {
-  max-width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background-color: var(--light-green); 
+
+  transition: all 0.3s ease-in-out;
+}
+.closed .log-out-container {
+  width: 76px;
 }
 .active .log-out-container {
   justify-content: space-between;
+  width: 250px;
 }
 .log-out-container button {
   display: flex;
@@ -177,6 +193,7 @@ button img {
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
+  white-space: nowrap;
 }
 .log-out-text p {
   font-size: 12px;
