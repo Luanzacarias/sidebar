@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>Sidebar</title>
+</head>
+<body>
+    <aside id="aside" class="closed">
+        <div class="sidebar">
+            
+            <div class="trigger-container">
+                <div class="trigger-content retractable">
+                    <img src="./images/pet.svg" alt="">
+                    <p>VET.</p>    
+                </div>  
+                <button onclick={handleChangeState()} class="trigger">
+                    <img src="./images/menu.svg" alt="">
+                </button>  
+            </div>
+            
+            
+            <div class="search">
+                    <img src="./images/search.svg" alt="">
+                    <input class="retractable" type="text" placeholder="Search..."> 
+            </div>
+            
+            <button >
+                <img src="./images/grid.svg" alt="">
+                <p class="retractable">Dashboard</p>
+            </button>
+            
+            <button >
+                <img src="./images/pet.svg" alt="">
+                <p class="retractable">Pets</p>
+            </button>
+            
+            <button >
+                <img src="./images/user.svg" alt="">
+                <p class="retractable">Clientes</p>
+            </button>
+            
+            <button >
+                <img src="./images/vet.svg" alt="">
+                <p class="retractable">Vets</p>
+            </button>
+            
+            <button >
+                <img src="./images/settings.svg" alt="">
+                <p class="retractable">Ajustes</p>
+            </button>
+        </div>
+        
+        
+        <div class="log-out-container">
+            <div class="log-out-content retractable">
+                <img src="./images/photo.jpg" alt="">
+                <div class="log-out-text">
+                    <h1>Eleanor Pena</h1>
+                    <p>Veterinária</p>
+                </div>
+            </div>
+            <button>
+                <img src="./images/log-out.svg" alt="">
+            </button>    
+        </div>
+        
+        
+    </aside>
+    <main>
+        Dashboard
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
